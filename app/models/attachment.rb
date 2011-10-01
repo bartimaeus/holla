@@ -1,4 +1,6 @@
-class Asset < CarrierWave::Uploader::Base
+require 'securerandom'
+
+class Attachment < CarrierWave::Uploader::Base
   storage :file
   
   class << self
@@ -20,7 +22,7 @@ class Asset < CarrierWave::Uploader::Base
     
     protected
       def generate_name(file)
-        ActiveSupport::SecureRandom.hex(13)
+        SecureRandom.hex(13)
       end
   end
     

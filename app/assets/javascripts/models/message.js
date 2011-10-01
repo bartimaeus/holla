@@ -22,6 +22,6 @@ Message.include({
   }
 });
 
-//= require <models/search>
+//= require models/search
 Message.extend(Search.Model);
 Message.search_attributes = ["body"];

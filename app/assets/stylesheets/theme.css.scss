@@ -1,4 +1,4 @@
-@import "utils";
+//@import "utils";
 
 body, html {
   margin: 0;
@@ -60,7 +60,7 @@ hr {
   border: 0;
   border-bottom: 1px solid #CDCDCC;
 
-  .box-shadow(0, 1px, 1px, #FCFCFC);
+  @include box-shadow(0, 1px, 1px, #FCFCFC);
 }
 
 header {
@@ -73,12 +73,12 @@ header {
   font-weight: bold;
   
   border: 2px solid #FFF;  
-  .border-radius(30px);
+  @include border-radius(30px);
   
-  .box-shadow(0, 0, 2px, #7F7F7F);
+  @include box-shadow(0, 0, 2px, #7F7F7F);
   text-shadow: 0 -1px 1px #7F7F7F;
   
-  .vbg-gradient(#58A7D5, #3995CC);
+  @include vbg-gradient(#58A7D5, #3995CC);
   background: -webkit-gradient(linear, left top, left bottom, from(#58A7D5), color-stop(0.5, #58A7D5), color-stop(0.5, #3995CC), to(#3995CC));
 }
 
@@ -88,7 +88,7 @@ header {
   border-top-color: #CBCBCB;
   border-bottom-color: #D7D7D7;
 
-  .vbg-gradient(#FFF, #E0E0E1);  
+  @include vbg-gradient(#FFF, #E0E0E1);  
 }
 
 .innerPanel {
@@ -96,21 +96,21 @@ header {
   background: #F2F2F2;
   border: 1px solid #EDEDED;
   
-  .border-radius(5px);
+  @include border-radius(5px);
 }
 
 .popup {
   background: #F1F2F2;
   border: 1px solid #FFF;
   
-  .box-shadow(0, 10px, 10px, #E3E3E3);
+  @include box-shadow(0, 10px, 10px, #E3E3E3);
 }
 
 .popup h2 {
   display: block;
   padding: 4px;
   
-  .vbg-gradient(#575859, #272425);
+  @include vbg-gradient(#575859, #272425);
 }
 
 button {
@@ -125,12 +125,12 @@ button {
   margin: 1px 1px 1px 0;
   outline: none;
 
-  .vbg-gradient(#F9F9F9, #E3E3E3);
-  .border-radius(3px);
-  .box-shadow(0, 1px, 1px, #FFF);
+  @include vbg-gradient(#F9F9F9, #E3E3E3);
+  @include border-radius(3px);
+  @include box-shadow(0, 1px, 1px, #FFF);
   
   :active {
-    .vbg-gradient(#E3E3E3, #F9F9F9);
+    @include vbg-gradient(#E3E3E3, #F9F9F9);
   }
 }
 
@@ -139,10 +139,10 @@ button.default, .ui-dialog-buttonset button:first-child {
   border: 1px solid #3F68A5;
   
   text-shadow: 0 -1px 1px #46677F;
-  .vbg-gradient(#7BB5DB, #4775B8);
+  @include vbg-gradient(#7BB5DB, #4775B8);
   
   :active, .active {
-    .vbg-gradient(#4775B8, #7BB5DB);
+    @include vbg-gradient(#4775B8, #7BB5DB);
   }
 }
 
@@ -152,13 +152,13 @@ button.pill {
 
   border: 1px solid #B1B1B1;
   
-  .box-shadow(0, 1px, 1px, #FFF);
-  .vbg-gradient(#F9F9FA, #CFD1D3);
-  .border-radius(18px);
+  @include box-shadow(0, 1px, 1px, #FFF);
+  @include vbg-gradient(#F9F9FA, #CFD1D3);
+  @include border-radius(18px);
 }
 
 button.pill:active, button.pill.active {
-  .vbg-gradient(#D4D6D7, #F9F9FA);
+  @include vbg-gradient(#D4D6D7, #F9F9FA);
 }
 
 button.pill.default {  
@@ -166,10 +166,10 @@ button.pill.default {
   color: #FFF;
   text-shadow: 0 1px 1px #375167;
   
-  .vbg-gradient(#78B1D9, #4978B9);
+  @include vbg-gradient(#78B1D9, #4978B9);
   
   :active, .active {
-    .vbg-gradient(#4978B9, #78B1D9);
+    @include vbg-gradient(#4978B9, #78B1D9);
   }
 }
 
@@ -183,13 +183,13 @@ input[type="password"] {
   outline: none;
   padding: 10px;
   
-  .border-radius(20px);
-  .vbg-gradient(#E6E6E7, #FAFAFA);  
+  @include border-radius(20px);
+  @include vbg-gradient(#E6E6E7, #FAFAFA);  
   background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E7), color-stop(0.3, #FAFAFA), to(#FAFAFA));  
 }
 
 textarea {
-  .border-radius(10px);
+  @include border-radius(10px);
   height: 70px;
 }
 
@@ -236,7 +236,7 @@ textarea {
   width: 220px;  
   margin: 0 2px 0 0;
   padding: 4px 8px;
-  .border-box();  
+  @include border-box();  
 }
 
 input.dark {
@@ -249,7 +249,7 @@ input.dark {
   color: #FFF;
   height: 20px;
   
-  .border-radius(15px);
+  @include border-radius(15px);
 }
 
 form.piece label {
@@ -258,7 +258,7 @@ form.piece label {
   overflow: hidden;
   border-bottom: 1px solid #CDCDCC;
   
-  .box-shadow(0, 1px, 1px, #FCFCFC);
+  @include box-shadow(0, 1px, 1px, #FCFCFC);
 }
 
 form.piece label span {
@@ -300,8 +300,8 @@ pre {
 .ui-dialog {
   padding: 0;
 
-  .border-radius(10px);
-  .vbg-gradient(#FFF, #E0E0E1);
+  @include border-radius(10px);
+  @include vbg-gradient(#FFF, #E0E0E1);
   
   -webkit-box-shadow: inset 0 -1px 1px #FFF, 0px 5px 20px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0 -1px 1px #FFF, 0px 5px 20px rgba(0, 0, 0, 0.4);
@@ -315,7 +315,7 @@ pre {
   color: #FFF;
   border-bottom: 1px solid #535353;
   
-  .vbg-gradient(#575859, #272425);
+  @include vbg-gradient(#575859, #272425);
 
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
@@ -335,7 +335,7 @@ pre {
   padding: 9px 0;
   margin: 0 9px;
   
-  .inset-box-shadow(0, 1px, 1px, #FCFCFC);
+  @include inset-box-shadow(0, 1px, 1px, #FCFCFC);
 }
 
 .ui-dialog .ui-dialog-buttonpane button {

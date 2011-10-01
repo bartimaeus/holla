@@ -58,10 +58,10 @@ Holla2::Application.routes.draw do
   
   resources :messages
   resources :channels
-  resources :assets  
+  resources :attachments  
   resources :app
   
-  match "/assets/*:id" => "assets#show"
+  match "/attachments/:id" => "attachments#show", :as => :show_attachment
   
   match "/auth/twitter/callback" => "authorize#create"
   match "/auth/failure" => "authorize#failure"

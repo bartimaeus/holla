@@ -1,9 +1,9 @@
-//= require <jquery.drop>
-//= require <jquery.upload>
+//= require jquery.drop
+//= require jquery.upload
 
 (function($){
 
-window.Assets = Spine.Controller.create({
+window.Attachments = Spine.Controller.create({
   proxied: ["drop"],
   
   handle: $("meta[name=handle]").attr("content"),
@@ -34,7 +34,7 @@ window.Assets = Spine.Controller.create({
       channel_id: this.messages.channel.id
     });
         
-    $.upload("/assets", {file: file}, {
+    $.upload("/attachments", {file: file}, {
       dataType: "json",
       
       upload: {

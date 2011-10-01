@@ -1,4 +1,4 @@
-//= require <jquery.ui>
+//= require jquery.ui
 
 jQuery(function($){
   if (typeof Juggernaut == "undefined") return;

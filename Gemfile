@@ -1,19 +1,20 @@
 source "http://rubygems.org"
 
-gem "rails", "3.0.5"
+gem "rails", "3.1.0"
 
-gem "less", :git => "git://github.com/maccman/less.git"
-gem "rack-less"
-gem "rack-sprockets"
-gem "yui-compressor"
+group :assets do
+  gem "sass-rails", "   ~> 3.1.0"
+  gem "coffee-rails", " ~> 3.1.0"
+  gem "uglifier"
+end
+
+gem "jquery-rails"
+gem "mysql2"
 gem "supermodel"
-
-gem "sqlite3"
 gem "juggernaut"
-gem "thin"
-
 gem "omniauth"
 gem "carrierwave"
+gem "thin"
 
 group :development do
   gem "ruby-debug19", :require => "ruby-debug"

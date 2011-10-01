@@ -6,3 +6,5 @@ log/*.log
 tmp/**/*
 vendor/bundle
 vendor/gems
+.sass-cache/
+*.sw[op]

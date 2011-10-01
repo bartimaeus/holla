@@ -96,7 +96,7 @@ window.Messages = Spine.Controller.create({
   },
   
   isScrolledToBottom: function(){
-    var scrollBottom  = this.items.attr("scrollHeight") -
+    var scrollBottom  = this.items[0].scrollHeight -
                         this.items.scrollTop() - 
                         this.items.outerHeight();
     return scrollBottom == 0;
@@ -104,7 +104,7 @@ window.Messages = Spine.Controller.create({
   
   scrollToBottom: function(){
     this.items.scrollTop(
-      this.items.attr("scrollHeight")
+      this.items[0].scrollHeight
     );
   },
   

@@ -6,5 +6,6 @@ log/*.log
 tmp/**/*
 vendor/bundle
 vendor/gems
+config/database.yml
 .sass-cache/
 *.sw[op]
